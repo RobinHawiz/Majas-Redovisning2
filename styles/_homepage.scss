@@ -1,0 +1,37 @@
+#homepage {
+  min-height: 90vh;
+  color: white;
+  @include flex(column, none, center);
+  width: 90%;
+  margin-left: auto;
+  .title-content {
+    flex: 1 1;
+    position: relative;
+    @include flex(column, none, flex-end);
+    h1 {
+    }
+    .box {
+      top: 0;
+      right: 0;
+      transform: translateX(-100%);
+      background: $color-orange1;
+    }
+  }
+
+  .text-content {
+    flex: 1 1;
+    position: relative;
+    @include flex(column, none, center);
+    .box {
+      background: $color-orange5;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .box {
+    height: 45vh;
+    width: 45vh;
+    position: absolute;
+  }
+}
