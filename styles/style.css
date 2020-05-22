@@ -79,20 +79,26 @@ a {
 }
 
 #homepage .title {
-  -ms-grid-column-align: center;
-      justify-self: center;
-  display: -ms-grid;
-  display: grid;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: h1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #homepage .title h1 {
   color: white;
-  -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
   padding: 0rem 2rem;
 }
 
@@ -156,5 +162,61 @@ a {
   -ms-grid-column: 3;
   grid-area: box2;
   background: #e0b663;
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  a {
+    font-size: 2rem;
+    padding: 0rem 0.5rem;
+  }
+  #homepage {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "box1 logo" "box1 nav" "h1 box2" "h2 box2";
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+  }
+  #homepage .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #homepage .logo img {
+    width: 6rem;
+  }
+  #homepage nav ul {
+    margin-top: 0rem;
+  }
+  #homepage .title {
+    text-align: center;
+  }
+  #homepage .text-content {
+    padding-top: 1rem;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  #homepage .text-content h2 {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */

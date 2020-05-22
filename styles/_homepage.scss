@@ -21,13 +21,11 @@
     }
   }
   .title {
-    justify-self: center;
-    display: grid;
     grid-area: h1;
+    @include flex(row, flex-end, center);
 
     h1 {
       color: white;
-      align-self: end;
       padding: 0rem 2rem;
     }
   }

@@ -62,3 +62,57 @@ $color-background: #1c1c1c;
 @import "homepage";
 @import url("//db.onlinewebfonts.com/c/20e2d60222c36b7a191e019607045109?family=Neusa + Medium");
 @import url("//db.onlinewebfonts.com/c/349dae95d5cb2ffe52119b41f3c043ad?family=NeusaW00-Light");
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+  a {
+    font-size: 2rem;
+    padding: 0rem 0.5rem;
+  }
+
+  #homepage {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: grid;
+
+    grid-template-areas:
+      "box1 logo"
+      "box1 nav"
+      "h1 box2"
+      "h2 box2";
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+
+    .logo {
+      @include flex(row, center, center);
+      img {
+        width: 6rem;
+      }
+    }
+
+    nav {
+      ul {
+        margin-top: 0rem;
+      }
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .text-content {
+      padding-top: 1rem;
+      align-self: flex-start;
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+}
