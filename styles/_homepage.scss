@@ -1,37 +1,85 @@
 #homepage {
-  min-height: 90vh;
-  color: white;
-  @include flex(column, none, center);
-  width: 90%;
-  margin-left: auto;
-  .title-content {
-    flex: 1 1;
-    position: relative;
-    @include flex(column, none, flex-end);
-    h1 {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: grid;
+  overflow: hidden;
+  position: relative;
+
+  grid-template-areas:
+    "logo box1 nav"
+    "h1 box1 ."
+    "h2 h2   box2"
+    "h2  h2  box2";
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  .logo {
+    grid-area: logo;
+    img {
+      height: auto;
+      width: 10rem;
+      margin: 0rem 2rem;
+      margin-top: 3rem;
     }
-    .box {
-      top: 0;
-      right: 0;
-      transform: translateX(-100%);
-      background: $color-orange1;
+  }
+  .title {
+    grid-area: h1;
+    @include flex(row, flex-end, center);
+
+    h1 {
+      color: white;
+      padding: 0rem 2rem;
+    }
+  }
+
+  nav {
+    grid-area: nav;
+
+    ul {
+      margin-top: 3rem;
+
+      @include flex(row, center, space-evenly);
+      flex-wrap: wrap;
     }
   }
 
   .text-content {
-    flex: 1 1;
+    grid-area: h2;
+    align-self: center;
+    color: white;
     position: relative;
-    @include flex(column, none, center);
-    .box {
-      background: $color-orange5;
-      right: 0;
-      bottom: 0;
+    @include flex(row, center, none);
+
+    h2 {
+      padding: 0rem 2rem;
+    }
+
+    .maja {
+      position: absolute;
+      z-index: -1;
+      p {
+        font-family: "Poppins", sans-serif;
+        font-size: calc(10rem + 35vw);
+        color: white;
+
+        opacity: 0.04;
+      }
     }
   }
 
   .box {
-    height: 45vh;
-    width: 45vh;
-    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  .box1 {
+    grid-area: box1;
+    background: $color-orange1;
+    z-index: -2;
+  }
+  .box2 {
+    grid-area: box2;
+    background: $color-orange5;
+    z-index: -2;
   }
 }
