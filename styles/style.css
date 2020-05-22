@@ -1,22 +1,9 @@
-@import url("//db.onlinewebfonts.com/c/20e2d60222c36b7a191e019607045109?family=Neusa + Medium");
-@import url("//db.onlinewebfonts.com/c/349dae95d5cb2ffe52119b41f3c043ad?family=NeusaW00-Light");
-@font-face {
-  font-family: "Neusa Medium";
-  src: url("//db.onlinewebfonts.com/t/20e2d60222c36b7a191e019607045109.eot");
-  src: url("//db.onlinewebfonts.com/t/20e2d60222c36b7a191e019607045109.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/20e2d60222c36b7a191e019607045109.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/20e2d60222c36b7a191e019607045109.woff") format("woff"), url("//db.onlinewebfonts.com/t/20e2d60222c36b7a191e019607045109.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/20e2d60222c36b7a191e019607045109.svg#Neusa Medium") format("svg");
-}
-
-@font-face {
-  font-family: "NeusaW00-Light";
-  src: url("//db.onlinewebfonts.com/t/349dae95d5cb2ffe52119b41f3c043ad.eot");
-  src: url("//db.onlinewebfonts.com/t/349dae95d5cb2ffe52119b41f3c043ad.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/349dae95d5cb2ffe52119b41f3c043ad.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/349dae95d5cb2ffe52119b41f3c043ad.woff") format("woff"), url("//db.onlinewebfonts.com/t/349dae95d5cb2ffe52119b41f3c043ad.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/349dae95d5cb2ffe52119b41f3c043ad.svg#NeusaW00-Light") format("svg");
-}
-
 /* Font sizes*/
-/* Font families */
 /* Colors */
 /* Mixins */
 /* Imports */
+@import url("//db.onlinewebfonts.com/c/20e2d60222c36b7a191e019607045109?family=Neusa + Medium");
+@import url("//db.onlinewebfonts.com/c/349dae95d5cb2ffe52119b41f3c043ad?family=NeusaW00-Light");
 * {
   margin: 0;
   padding: 0;
@@ -33,13 +20,15 @@ body {
 }
 
 h1 {
-  font-size: 9.6rem;
-  font-family: "Neusa Medium", Fallback, sans-serif;
+  font-size: 9rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
 }
 
 h2 {
-  font-size: 4rem;
-  font-family: "NeusaW00-Light", Fallback, sans-serif;
+  font-size: 3.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
 }
 
 ul {
@@ -47,10 +36,12 @@ ul {
 }
 
 a {
-  font-size: 3.3rem;
+  font-size: 3rem;
   text-decoration: none;
   color: white;
-  font-family: "Neusa Medium", Fallback, sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  padding: 0rem 0.5rem;
 }
 
 #homepage {
@@ -164,16 +155,15 @@ a {
   background: #e0b663;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   h1 {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   a {
-    font-size: 2rem;
-    padding: 0rem 0.5rem;
+    font-size: 1.5rem;
   }
   #homepage {
     min-height: 100vh;
