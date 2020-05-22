@@ -21,3 +21,14 @@ h2 {
   font-size: $header2;
   font-family: $font-Neusa-Light;
 }
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  font-size: $a;
+  text-decoration: none;
+  color: white;
+  font-family: $font-Neusa-Medium;
+}
