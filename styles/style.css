@@ -49,6 +49,8 @@ a {
   min-width: 100vw;
   display: -ms-grid;
   display: grid;
+  overflow: hidden;
+  position: relative;
       grid-template-areas: "logo box1 nav" "h1 box1 ." "h2 h2   box2" "h2  h2  box2";
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
@@ -125,13 +127,38 @@ a {
   -ms-grid-column-span: 2;
   grid-area: h2;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
   color: white;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
 }
 
 #homepage .text-content h2 {
   padding: 0rem 2rem;
+}
+
+#homepage .text-content .maja {
+  position: absolute;
+  z-index: -1;
+}
+
+#homepage .text-content .maja p {
+  font-family: "Poppins", sans-serif;
+  font-size: calc(10rem + 35vw);
+  color: white;
+  opacity: 0.04;
 }
 
 #homepage .box {
@@ -145,6 +172,7 @@ a {
   -ms-grid-column: 2;
   grid-area: box1;
   background: #c34431;
+  z-index: -2;
 }
 
 #homepage .box2 {
@@ -153,6 +181,7 @@ a {
   -ms-grid-column: 3;
   grid-area: box2;
   background: #e0b663;
+  z-index: -2;
 }
 
 @media screen and (max-width: 850px) {
